@@ -1,0 +1,42 @@
+InetAddress类：标识网络上的硬件资源（IP地址的相关信息）
+
+URL：统一资源定位符（internet上的资源）
+协议名+资源名
+
+TCP：使用TCP协议实现网络通信的socket相关类
+面向连接、可靠、有序的，以字节流的方式发送数据
+1客户端Socket 
+2服务器端ServerSocket
+1）通过accept侦听客户端连接   通过多线程实现多客户端的同时登陆
+
+UDP：使用UDP协议，将数据保存在数据报中，通过网络进行通信
+无连接、不可靠、无序的，速度快，以数据报为数据载体
+DatagramPacket:标示数据报包
+DatagramSocket:进行端到端的通信的类
+1服务端
+1）创建DatagramSocket，指定端口号
+2）创建DatagramPacket:
+3）接收客户端发送的数据信息
+4）读取数据
+2客户端
+1）定义发送的信息
+2）创建DatagramPacket，包含将要发送的信息
+3）创建DatagramSocket
+4）发送数据
+
+两台计算机通过网络进行通信
+IP地址（每个机器的唯一标示）  协议  端口号
+长度 32位              区分不同的应用程序（0~65535）     
+IP地址+端口号组成socket
+socket为网络上运行程序之间的双向通信链路的终结的 TCP和UDP的基础
+
+TCP传输控制协议
+IP网络协议
+
+物理层  数据链路层 网络层 传输层（TCP/IP） 应用层(HTTP、FTP)
+
+总结：
+多线程的优先级（降低优先级，不然速度慢）
+一般不关闭输出流，关闭socket即可
+对象传输：ObjectOutputStream
+文件传输：FileOutputStream
